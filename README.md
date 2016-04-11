@@ -2,7 +2,7 @@
 
 先安装框架<a href='http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/install.html'>Installing Pyramid</a>
 
-然后在项目根目录执行 sh run.sh，会在6543端口起来一个服务器。
+然后在项目根目录执行 sh run.sh，会在6543端口起来一个服务。
 
 接口名：log
 请求方式：POST
