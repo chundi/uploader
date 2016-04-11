@@ -8,10 +8,11 @@
 请求方式：POST
 参数：
 
-	* sign:签名
-	* device_id:设备ID
-	* log_type:日志类型
-	* ts:上传时间，需要时间戳，精确到秒
+    * sign:签名
+    * device_id:设备ID
+    * log_type:日志类型
+    * ts:上传时间，需要时间戳，精确到秒
+    * log:日志文件
 
 签名生成方式：
 
