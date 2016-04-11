@@ -7,6 +7,7 @@ from uploader.config import (
 import hmac
 import hashlib
 import urllib
+import os
 
 def generate_sign(**kw_args):
     '''
@@ -36,16 +37,18 @@ def save_file(fname, buf):
     Args:
         fname:需要保存的文件名，不带路径，比如123.txt
         buf:要保存的内容，字符串
+
     Returns:
         1:保存成功
         0:保存失败
     '''
     try:
         _file = None
+        if not os.path.exists(LOG_PATH):
+            os.makedirs(LOG_PATH)
         log_path = '{0}/{1}'.format(LOG_PATH, fname)
         _file = file(log_path, 'w')
         _file.write(buf)
-        _file.close()
     except Exception as ex:
         print ex
         return 0
